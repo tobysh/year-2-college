@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		
+		<link rel="stylesheet" href="../static/style.css">
+		<title>table!</title>
+		<script>
+			function submitIdentity(){
+				let firstname = document.getElementById("firstname").value;
+				let lastname = document.getElementById("lastname").value;
+				let age = document.getElementById("age").value;
+				let cars = document.getElementById("cars").value;
+				let language = document.getElementByName("fav-language").value;
+				console.log(`First name: ${firstname}\nLast name: ${lastname}\nAge: ${age}\nCars: ${cars}`)
+			}	
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<table>
+				<thead>
+					<tr style="text-decoration-line: underline;"">
+						<th>Firstname</th>
+						<th>Occupation</th>
+						<th>Age</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Tim</td>
+						<td>Developer</td>
+						<td>50</td>
+					</tr>
+					<tr>
+						<td>Kim</td>
+						<td>Graphic Designer</td>
+						<td>18</td>
+					</tr>
+					<tr>
+						<td>Troy</td>
+						<td>Team Leader</td>
+						<td>32</td>
+					</tr>
+				</tbody>
+			</table>
+			<table>
+				<thead>
+					<tr style="text-decoration-line: underline;"">
+						<th>Preview</th>
+						<th>Type</th>
+						<th>Processor</th>
+						<th>In Stock</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td><img style="padding:0; margin:0;"src="../static/macbook.jpg"></td>
+						<td>M5 Macbook Pro</td>
+						<td>Apple M5 Pro Chip</td>
+						<td>Yes</td>
+					</tr>
+					<tr>
+						<td>Kim</td>
+						<td>Graphic Designer</td>
+						<td>18</td>
+					</tr>
+					<tr>
+						<td>Troy</td>
+						<td>Team Leader</td>
+						<td>32</td>
+					</tr>
+				</tbody>
+			</table>
+			<form class="identity">
+
+				<label for="firstname">Whats your first name?</label>
+				<input id="firstname" placeholder="John">
+				<label for="lastname">Whats your last name?</label>
+				<input id="lastname" placeholder="Smith">
+				<label for="age">Whats your age?</label>
+				<input id="age" placeholder="20">
+
+				<label for="cars">Choose a car:</label>
+				<select name="cars" id="cars">
+					<option value="volvo">Volvo</option>
+					<option value="saab">Saab</option>
+					<option value="mercedes">Mercedes</option>
+					<option value="audi">Audi</option>
+				</select>
+
+				<div class="radios">
+					<input type="radio" id="html" name="fav_language" value="HTML">
+					<label for="html">HTML</label><br>
+					<input type="radio" id="css" name="fav_language" value="CSS">
+					<label for="css">CSS</label><br>
+					<input type="radio" id="javascript" name="fav_language" value="JavaScript">
+					<label for="javascript">JavaScript</label>
+				</div>
+				
+				
+
+				<input type="button" value="Submit" onclick="submitIdentity()" >
+			</form>
+			
+		</div>
+	</body>
+</html>
